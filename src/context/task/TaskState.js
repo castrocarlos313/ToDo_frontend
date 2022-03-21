@@ -25,7 +25,6 @@ const TaskState = (props) => {
   const [state, dispatch] = useReducer(TaskReducer, initialState);
 
   const changeModalForm = () => {
-    console.log(state.taskModal);
     dispatch({ type: CHANGE_MODAL_STATE });
   };
 
@@ -35,8 +34,6 @@ const TaskState = (props) => {
         ...task,
         folderId,
       });
-
-      console.log(data);
 
       dispatch({
         type: CREATE_TASK,
@@ -58,8 +55,6 @@ const TaskState = (props) => {
 
     try {
       const { data } = await clienteAxios.get(`/api/task/${folderId}`);
-
-      console.log(data);
 
       dispatch({
         type: GET_TASKS,

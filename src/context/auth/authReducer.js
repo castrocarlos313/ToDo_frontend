@@ -3,7 +3,6 @@ import { LOGOUT, LOGIN_SUCCESS, SIGN_UP_SUCCESS } from "../../types";
 
 /* eslint-disable indent */
 const AuthReducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
     case SIGN_UP_SUCCESS:
     case LOGIN_SUCCESS:

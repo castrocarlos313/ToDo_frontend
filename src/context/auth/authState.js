@@ -24,7 +24,6 @@ const AuthState = (props) => {
 
   const obtenerUsuario = async () => {
     const token = localStorage.getItem("token");
-    console.log(token);
     if (token) {
       tokenAuth(token);
     }

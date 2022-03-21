@@ -30,8 +30,6 @@ const FolderState = (props) => {
     try {
       const { data } = await clienteAxios.get("/api/folder");
 
-      console.log(data);
-
       dispatch({
         type: GET_FOLDERS,
         payload: data,
@@ -46,8 +44,6 @@ const FolderState = (props) => {
   const createFolder = async (folder) => {
     try {
       const { data } = await clienteAxios.post("/api/folder", folder);
-
-      console.log(data);
 
       dispatch({
         type: CREATE_FOLDER,
@@ -82,8 +78,6 @@ const FolderState = (props) => {
         nombre: folder.nombre,
       });
 
-      console.log(data);
-
       dispatch({
         type: SAVE_FOLDER_CHANGES,
         payload: data.folder,
@@ -100,8 +94,6 @@ const FolderState = (props) => {
   const deleteFolder = async (folder) => {
     try {
       const { data } = await clienteAxios.delete(`/api/folder/${folder._id}`);
-
-      console.log(data);
 
       dispatch({
         type: DELETE_FOLDER,
