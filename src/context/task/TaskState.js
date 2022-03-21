@@ -5,6 +5,7 @@ import {
   CHANGE_MODAL_STATE,
   CLEAR_CONTEXT,
   CREATE_TASK,
+  DELETE_TASK,
   FETCHING_TASKS,
   GET_TASKS,
   SAVE_TASK_CHANGES,
@@ -102,6 +103,23 @@ const TaskState = (props) => {
     }
   };
 
+  const deleteTask = async (task) => {
+    try {
+      const { data } = await clienteAxios.delete(`/api/task/${task._id}`);
+
+      dispatch({
+        type: DELETE_TASK,
+        payload: data.task,
+      });
+    } catch ({ response: { data } }) {
+      if (data.valido === false) {
+        return toast.error("Su sesion a expirado, vuelva a iniciar sesion");
+      }
+
+      toast.error(data.msg);
+    }
+  };
+
   const resetTasks = () => {
     dispatch({
       type: CLEAR_CONTEXT,
@@ -122,6 +140,7 @@ const TaskState = (props) => {
         unselectModification,
         saveTaskChanges,
         resetTasks,
+        deleteTask,
       }}
     >
       {props.children}

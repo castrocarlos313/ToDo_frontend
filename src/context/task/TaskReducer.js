@@ -2,6 +2,7 @@ import {
   CHANGE_MODAL_STATE,
   CLEAR_CONTEXT,
   CREATE_TASK,
+  DELETE_TASK,
   FETCHING_TASKS,
   GET_TASKS,
   SAVE_TASK_CHANGES,
@@ -51,6 +52,15 @@ const TaskReducer = (state, action) => {
             return action.payload;
           }
           return task;
+        }),
+      };
+    case DELETE_TASK:
+      return {
+        ...state,
+        tasks: state.tasks.filter((task) => {
+          if (task._id !== action.payload._id) {
+            return task;
+          }
         }),
       };
     case CLEAR_CONTEXT:

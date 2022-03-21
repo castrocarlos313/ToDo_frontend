@@ -28,7 +28,8 @@ const P = styled.p`
 `;
 
 const Task = ({ task }) => {
-  const { selectModification, saveTaskChanges } = useContext(TaskContext);
+  const { selectModification, saveTaskChanges, deleteTask } =
+    useContext(TaskContext);
   const { nombre, completo, _id } = task;
 
   const changeTaskState = () => {
@@ -56,7 +57,7 @@ const Task = ({ task }) => {
         >
           <IoMdCheckmarkCircleOutline />
         </IconBoton>
-        <IconBoton color="#fff" bg="red">
+        <IconBoton color="#fff" bg="red" onClick={() => deleteTask(task)}>
           <IoMdTrash />
         </IconBoton>
         <IconBoton
