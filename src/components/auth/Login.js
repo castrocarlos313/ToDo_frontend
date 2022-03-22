@@ -55,7 +55,7 @@ const Login = () => {
           onChange={formik.handleChange}
           value={formik.values.contraseña}
           placeHolder="Ingrese su contraseña"
-          labelName="Contreseña"
+          labelName="Contraseña"
           type="password"
           error={formik.errors.contraseña}
         />
