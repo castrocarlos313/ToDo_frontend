@@ -18,6 +18,14 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Invitado = styled.span`
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+`;
+
 const Login = () => {
   const navigate = useNavigate();
   const { isLog, login } = useContext(AuthContext);
@@ -77,6 +85,11 @@ const Login = () => {
             Registrarse
           </Boton>
         </div>
+        <Invitado
+          onClick={() => login({ email: "i@i.com", contraseña: "123456" })}
+        >
+          Ingresar como invitado
+        </Invitado>
       </Form>
     </Container>
   );
