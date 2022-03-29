@@ -45,7 +45,13 @@ const SignUp = () => {
   return (
     <Container>
       <Form onSubmit={formik.handleSubmit}>
-        <h1>Registrarse</h1>
+        <h1
+          css={css`
+            text-align: center;
+          `}
+        >
+          Registrarse
+        </h1>
         <InputGroup
           inputId="nombre"
           onChange={formik.handleChange}
@@ -86,6 +92,7 @@ const SignUp = () => {
           css={css`
             display: flex;
             justify-content: space-around;
+            margin: 1rem 0px;
           `}
         >
           <Boton type="submit">Crear cuenta</Boton>

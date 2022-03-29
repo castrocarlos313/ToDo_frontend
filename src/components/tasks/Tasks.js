@@ -51,7 +51,14 @@ const Tasks = () => {
         {fetching && <Spinner />}
         {folderSelected && !fetching && (
           <>
-            <Boton type="button" onClick={() => changeModalForm()}>
+            <Boton
+              type="button"
+              bg="#0E6655"
+              bgHover="#000"
+              color="#fff"
+              colorHover="#fff"
+              onClick={() => changeModalForm()}
+            >
               Crear tarea
             </Boton>
             <TasksList tasks={tasks} />

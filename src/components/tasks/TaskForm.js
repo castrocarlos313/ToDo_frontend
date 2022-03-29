@@ -74,6 +74,7 @@ const TaskForm = () => {
           css={css`
             display: flex;
             justify-content: space-between;
+            margin: 0 1rem;
           `}
         >
           <h3>{taskModification ? "Modificar tarea" : "Crear tarea"}</h3>

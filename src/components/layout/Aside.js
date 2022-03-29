@@ -46,7 +46,14 @@ const Aside = () => {
           height: 100%;
         `}
       >
-        <Boton type="button" onClick={() => changeModalForm()}>
+        <Boton
+          type="button"
+          bg="#1154AE"
+          bgHover="#fff"
+          color="#fff"
+          colorHover="#000"
+          onClick={() => changeModalForm()}
+        >
           Crear carpeta
         </Boton>
         {fetching ? <Spinner /> : <FoldersList folders={folders} />}

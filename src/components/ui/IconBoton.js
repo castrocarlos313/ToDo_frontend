@@ -5,10 +5,10 @@ const Icon = styled.button`
   height: 30px;
   border: none;
   border-radius: 50%;
+  margin: auto 0;
   background-color: ${(props) => (props.bg ? props.bg : "#000")};
   color: ${(props) => (props.color ? props.color : "#fff")};
   transition: transform 0.1s ease-in-out;
-
   &:hover {
     transform: scale(1.1);
   }

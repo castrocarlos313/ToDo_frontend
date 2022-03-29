@@ -28,6 +28,11 @@ const Nav = styled.nav`
   }
 `;
 
+const Logo = styled.h1`
+  margin: auto 0;
+  font-size: 2rem;
+`;
+
 const Header = () => {
   const { usuario, logout } = useContext(AuthContext);
   const { resetFolders } = useContext(FolderContext);
@@ -35,7 +40,7 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <h1>ToDo_APP</h1>
+      <Logo>ToDo_APP</Logo>
       <Nav>
         <h3
           css={css`

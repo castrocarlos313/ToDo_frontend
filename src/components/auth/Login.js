@@ -40,7 +40,13 @@ const Login = () => {
   return (
     <Container>
       <Form onSubmit={formik.handleSubmit}>
-        <h1>Iniciar sesión</h1>
+        <h1
+          css={css`
+            text-align: center;
+          `}
+        >
+          Iniciar sesión
+        </h1>
         <InputGroup
           inputId="email"
           onChange={formik.handleChange}
@@ -63,6 +69,7 @@ const Login = () => {
           css={css`
             display: flex;
             justify-content: space-around;
+            margin: 1rem 0px;
           `}
         >
           <Boton type="submit">Ingresar</Boton>

@@ -8,12 +8,14 @@ const Boton = styled.button`
   border: none;
   box-sizing: border-box;
   border-radius: 1rem;
-  background-color: #e1e1e1;
+  background-color: ${(props) => (props.bg ? props.bg : "#e1e1e1")};
   font-size: 2rem;
   transition: background-color 0.3s ease-in-out;
+  color: ${(props) => (props.color ? props.color : "#000")};
   &:hover {
     cursor: pointer;
-    background-color: #fff;
+    background-color: ${(props) => (props.bgHover ? props.bgHover : "#fff")};
+    color: ${(props) => (props.colorHover ? props.colorHover : "#000")};
   }
 `;
 
