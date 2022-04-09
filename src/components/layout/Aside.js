@@ -8,17 +8,13 @@ import Boton from "../ui/Boton";
 import Spinner from "../ui/Spinner";
 
 const AsideBar = styled.aside`
-  width: 45%;
+  width: 85%;
   height: 100%;
   box-sizing: border-box;
   background: #000;
   border-radius: 2rem 0 0 2rem;
   color: #fff;
   padding: 2rem;
-
-  @media (max-width: 890px) {
-    width: 40%;
-  }
 
   @media (max-width: 768px) {
     width: 100%;

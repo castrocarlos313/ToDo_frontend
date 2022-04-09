@@ -11,10 +11,10 @@ import FolderForm from "./FolderForm";
 
 const Content = styled.div`
   background-color: #f9f9f9;
-  width: 95%;
+  width: 90%;
   height: 550px;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 10rem auto;
   border-radius: 2rem;
   display: flex;
   flex-direction: row;

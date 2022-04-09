@@ -14,6 +14,7 @@ const Footer = () => {
         background: #000;
         text-align: center;
         margin: 0;
+        z-index: 9999;
       `}
     >
       <p>Desarrolado por Carlos Castro , {new Date().getFullYear()}.</p>

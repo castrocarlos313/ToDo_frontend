@@ -28,7 +28,7 @@ const Tasks = () => {
     <div
       css={css`
         box-sizing: border-box;
-        width: 50%;
+        width: 100%;
         height: 100%;
         padding: 2rem;
         gap: 2rem;
