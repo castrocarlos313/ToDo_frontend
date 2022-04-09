@@ -95,10 +95,12 @@ const FolderState = (props) => {
     try {
       const { data } = await clienteAxios.delete(`/api/folder/${folder._id}`);
 
-      dispatch({
-        type: DELETE_FOLDER,
-        payload: data.folder,
-      });
+      if (data.folder) {
+        dispatch({
+          type: DELETE_FOLDER,
+          payload: data.folder,
+        });
+      }
     } catch ({ response: { data } }) {
       if (data.valido === false) {
         return toast.error("Su sesion a expirado, vuelva a iniciar sesion");
