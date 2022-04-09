@@ -35,7 +35,7 @@ const FolderState = (props) => {
         payload: data,
       });
     } catch (error) {
-      console.log({ ...error });
+      console.log(error);
     }
   };
 

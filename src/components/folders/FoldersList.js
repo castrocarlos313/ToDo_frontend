@@ -15,8 +15,6 @@ const NoFolders = styled.p`
 `;
 
 const FoldersList = ({ folders }) => {
-  console.log(folders);
-
   return (
     <FoldersContainer>
       {folders.length === 0 ? (

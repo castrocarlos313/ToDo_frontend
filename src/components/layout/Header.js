@@ -18,7 +18,7 @@ const HeaderStyled = styled.header`
   padding: 1rem 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  z-index: 9999;
+  z-index: 99;
 `;
 
 const Nav = styled.nav`

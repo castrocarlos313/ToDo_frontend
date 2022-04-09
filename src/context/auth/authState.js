@@ -35,8 +35,6 @@ const AuthState = (props) => {
         payload: data,
       });
     } catch (error) {
-      console.log({ ...error });
-
       dispatch({
         type: LOGOUT,
       });
@@ -54,8 +52,6 @@ const AuthState = (props) => {
         payload: data,
       });
     } catch ({ response }) {
-      console.log(response.data);
-
       toast.error(response.data.msg);
     }
   };
@@ -69,8 +65,6 @@ const AuthState = (props) => {
         payload: data,
       });
     } catch ({ response }) {
-      console.log(response.data);
-
       toast.error(response.data.msg);
     }
   };
