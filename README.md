@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# ToDo_frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicacion para organizar actividades hecha en react y styled components. Subido en https://stupefied-ride-14563c.netlify.app/.
 
-## Available Scripts
+# Contenido
 
-In the project directory, you can run:
+- [ToDo_frontend](#todo_frontend)
+- [Contenido](#contenido)
+- [Tecnologias usadas](#tecnologias-usadas)
+- [Launch](#launch)
+- [Imagenes](#imagenes)
+  - [Inicio de sesion](#inicio-de-sesion)
+  - [Registro](#registro)
+  - [Inicio de la app](#inicio-de-la-app)
+    - [Sin carpeta](#sin-carpeta)
+    - [Crear carpeta](#crear-carpeta)
+    - [Carpeta seleccionada](#carpeta-seleccionada)
+    - [Modificando carpeta](#modificando-carpeta)
+    - [Eliminar carpeta](#eliminar-carpeta)
+    - [Crear tarea](#crear-tarea)
+    - [Marcar tarea como completa](#marcar-tarea-como-completa)
+    - [Modificar tarea](#modificar-tarea)
+    - [Eliminar tarea](#eliminar-tarea)
 
-### `npm start`
+# Tecnologias usadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [React](https://es.reactjs.org/)
+- [react-router-dom](https://reactrouter.com/)
+- [react-hot-toast](https://react-hot-toast.com/)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [prop-types](https://www.npmjs.com/package/prop-types)
+- [formik](https://formik.org/)
+- [axios](https://axios-http.com/docs/intro)
+- [Eslint](https://eslint.org/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Launch
 
-### `npm test`
+Antes de iniciar esta aplicacion se tiene que descargar [ToDo_backend](https://github.com/castrocarlos313/ToDo_backend) e iniciar el servidor de node, crear un `.env.development.local` y crear la variable de entorno `REACT_APP_BACKEND_URL=http://localhost:5000`, y ejecutar los siguiente comandos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ npm install
+$ npm run dev
+```
 
-### `npm run build`
+# Imagenes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Inicio de sesion
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![login](https://i.imgur.com/3SY8Isx.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Registro
 
-### `npm run eject`
+![Registro](https://i.imgur.com/Gw531qe.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Inicio de la app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Sin carpeta
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![index](https://i.imgur.com/H2UG2si.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Crear carpeta
 
-## Learn More
+![CrearCarpeta](https://i.imgur.com/415CHb8.png)
+![CarpetaSeleccionada](https://i.imgur.com/XOAjwUR.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Carpeta seleccionada
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![CarpetaSeleccionada](https://i.imgur.com/XOAjwUR.png)
 
-### Code Splitting
+### Modificando carpeta
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![ModificandoCarpetaModal](https://i.imgur.com/0dgmrkB.png)
+![CarpetaModificada](https://i.imgur.com/9stgbrE.png)
 
-### Analyzing the Bundle Size
+### Eliminar carpeta
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![CarpetaEliminar](https://i.imgur.com/9stgbrE.png)
+![index](https://i.imgur.com/H2UG2si.png)
 
-### Making a Progressive Web App
+### Crear tarea
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![CarpetaSeleccionada](https://i.imgur.com/XOAjwUR.png)
+![CrearTarea](https://i.imgur.com/PtfOffW.png)
+![TareaCreada](https://i.imgur.com/VdWf4Iw.png)
 
-### Advanced Configuration
+### Marcar tarea como completa
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![TareaIncompleta](https://i.imgur.com/VdWf4Iw.png)
+![TareaCompleata](https://i.imgur.com/xA3gagi.png)
 
-### Deployment
+### Modificar tarea
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![TareaCompleata](https://i.imgur.com/xA3gagi.png)
+![ModificandoTarea](https://i.imgur.com/E9EizIr.png)
+![TareaModificada](https://i.imgur.com/lx3by8w.png)
 
-### `npm run build` fails to minify
+### Eliminar tarea
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![TareaModificada](https://i.imgur.com/lx3by8w.png)
+![CarpetaSeleccionada](https://i.imgur.com/XOAjwUR.png)

@@ -1,9 +1,14 @@
 import tokenAuth from "../../config/token";
-import { LOGOUT, LOGIN_SUCCESS, SIGN_UP_SUCCESS } from "../../types";
+import { LOGOUT, LOGIN_SUCCESS, SIGN_UP_SUCCESS, LOADING } from "../../types";
 
 /* eslint-disable indent */
 const AuthReducer = (state, action) => {
   switch (action.type) {
+    case LOADING:
+      return {
+        ...state,
+        loading: true,
+      };
     case SIGN_UP_SUCCESS:
     case LOGIN_SUCCESS:
       localStorage.setItem("token", action.payload.token);

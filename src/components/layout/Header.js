@@ -8,12 +8,17 @@ import TaskContext from "../../context/task/TaskContext";
 import Boton from "../ui/Boton";
 
 const HeaderStyled = styled.header`
-  position: sticky;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #000;
   color: white;
   padding: 1rem 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  z-index: 99;
 `;
 
 const Nav = styled.nav`

@@ -36,6 +36,7 @@ const FolderForm = () => {
     onSubmit: (values, { resetForm }) => {
       if (folderFormModification) {
         saveFolderChanges(values);
+        unselectModification();
       } else {
         createFolder(values);
       }

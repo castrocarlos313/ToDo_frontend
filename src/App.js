@@ -11,7 +11,6 @@ import TaskState from "./context/task/TaskState";
 const token = localStorage.getItem("token");
 
 if (token) {
-  console.log(token);
   tokenAuth(token);
 }
 
@@ -20,7 +19,15 @@ function App() {
     <AuthState>
       <FolderState>
         <TaskState>
-          <Toaster position="top-right" />
+          <Toaster
+            position="top-left"
+            toastOptions={{
+              style: {
+                top: 30,
+                zIndex: "99999",
+              },
+            }}
+          />
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Login />} />

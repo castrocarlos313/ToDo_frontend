@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { use, useLocation } from "react-router-dom";
 import clienteAxios from "../../config/axios";
 import tokenAuth from "../../config/token";
-import { LOGOUT, LOGIN_SUCCESS, SIGN_UP_SUCCESS } from "../../types";
+import { LOGOUT, LOGIN_SUCCESS, SIGN_UP_SUCCESS, LOADING } from "../../types";
 import AuthContext from "./authContext";
 import AuthReducer from "./authReducer";
 
@@ -35,8 +35,6 @@ const AuthState = (props) => {
         payload: data,
       });
     } catch (error) {
-      console.log({ ...error });
-
       dispatch({
         type: LOGOUT,
       });
@@ -44,6 +42,10 @@ const AuthState = (props) => {
   };
 
   const signUp = async (usuario) => {
+    dispatch({
+      type: LOADING,
+    });
+
     try {
       const { data } = await clienteAxios.post("/api/usuario", usuario);
 
@@ -54,13 +56,15 @@ const AuthState = (props) => {
         payload: data,
       });
     } catch ({ response }) {
-      console.log(response.data);
-
       toast.error(response.data.msg);
     }
   };
 
   const login = async (usuario) => {
+    dispatch({
+      type: LOADING,
+    });
+
     try {
       const { data } = await clienteAxios.post("/api/auth", usuario);
 
@@ -69,8 +73,6 @@ const AuthState = (props) => {
         payload: data,
       });
     } catch ({ response }) {
-      console.log(response.data);
-
       toast.error(response.data.msg);
     }
   };

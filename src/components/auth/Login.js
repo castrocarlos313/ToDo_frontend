@@ -9,6 +9,7 @@ import validateLogin from "../../helpers/validateLogin";
 import Boton from "../ui/Boton";
 import Form from "../ui/Form";
 import InputGroup from "../ui/Input";
+import Spinner from "../ui/Spinner";
 
 const Container = styled.div`
   width: 100%;
@@ -28,7 +29,7 @@ const Invitado = styled.span`
 
 const Login = () => {
   const navigate = useNavigate();
-  const { isLog, login } = useContext(AuthContext);
+  const { isLog, login, loading } = useContext(AuthContext);
 
   useEffect(() => {
     if (isLog) {
@@ -47,50 +48,54 @@ const Login = () => {
 
   return (
     <Container>
-      <Form onSubmit={formik.handleSubmit}>
-        <h1
-          css={css`
-            text-align: center;
-          `}
-        >
-          Iniciar sesión
-        </h1>
-        <InputGroup
-          inputId="email"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-          placeHolder="Ingrese su email"
-          labelName="Email"
-          type="email"
-          error={formik.errors.email}
-        />
-        <InputGroup
-          inputId="contraseña"
-          onChange={formik.handleChange}
-          value={formik.values.contraseña}
-          placeHolder="Ingrese su contraseña"
-          labelName="Contraseña"
-          type="password"
-          error={formik.errors.contraseña}
-        />
-        <div
-          css={css`
-            display: flex;
-            justify-content: space-around;
-            margin: 1rem 0px;
-          `}
-        >
-          <Boton type="submit">Ingresar</Boton>
-          <Boton type="button" onClick={() => navigate("/sign-up")}>
-            Registrarse
-          </Boton>
-        </div>
-        <Invitado
-          onClick={() => login({ email: "i@i.com", contraseña: "123456" })}
-        >
-          Ingresar como invitado
-        </Invitado>
-      </Form>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Form onSubmit={formik.handleSubmit}>
+          <h1
+            css={css`
+              text-align: center;
+            `}
+          >
+            Iniciar sesión
+          </h1>
+          <InputGroup
+            inputId="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            placeHolder="Ingrese su email"
+            labelName="Email"
+            type="email"
+            error={formik.errors.email}
+          />
+          <InputGroup
+            inputId="contraseña"
+            onChange={formik.handleChange}
+            value={formik.values.contraseña}
+            placeHolder="Ingrese su contraseña"
+            labelName="Contraseña"
+            type="password"
+            error={formik.errors.contraseña}
+          />
+          <div
+            css={css`
+              display: flex;
+              justify-content: space-around;
+              margin: 1rem 0px;
+            `}
+          >
+            <Boton type="submit">Ingresar</Boton>
+            <Boton type="button" onClick={() => navigate("/sign-up")}>
+              Registrarse
+            </Boton>
+          </div>
+          <Invitado
+            onClick={() => login({ email: "i@i.com", contraseña: "123456" })}
+          >
+            Ingresar como invitado
+          </Invitado>
+        </Form>
+      )}
     </Container>
   );
 };

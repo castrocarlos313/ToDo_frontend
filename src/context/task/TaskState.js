@@ -62,7 +62,7 @@ const TaskState = (props) => {
         payload: data.tasks,
       });
     } catch (error) {
-      console.log({ ...error });
+      console.log(error);
     }
   };
 
@@ -81,14 +81,11 @@ const TaskState = (props) => {
   };
 
   const saveTaskChanges = async (task) => {
-    console.log(task);
     try {
       const { data } = await clienteAxios.put(`/api/task/${task._id}`, {
         nombre: task.nombre,
         completo: task.completo,
       });
-
-      console.log(data);
 
       dispatch({
         type: SAVE_TASK_CHANGES,
@@ -107,10 +104,12 @@ const TaskState = (props) => {
     try {
       const { data } = await clienteAxios.delete(`/api/task/${task._id}`);
 
-      dispatch({
-        type: DELETE_TASK,
-        payload: data.task,
-      });
+      if (data.task) {
+        dispatch({
+          type: DELETE_TASK,
+          payload: data.task,
+        });
+      }
     } catch ({ response: { data } }) {
       if (data.valido === false) {
         return toast.error("Su sesion a expirado, vuelva a iniciar sesion");

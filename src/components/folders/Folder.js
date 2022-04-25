@@ -8,7 +8,6 @@ import FolderContext from "../../context/folder/folderContext";
 import IconBoton from "../ui/IconBoton";
 
 const Li = styled.li`
-  box-sizing: border-box;
   padding: 0.5rem 1rem;
   background-color: ${(props) => props.bg};
   border-bottom: 2px solid black;
