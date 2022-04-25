@@ -97,5 +97,4 @@ $ npm run dev
 ### Eliminar tarea
 
 ![TareaModificada](https://i.imgur.com/lx3by8w.png)
-![TareaEliminada](https://i.imgur.com/6RaVaGY.png)
 ![CarpetaSeleccionada](https://i.imgur.com/XOAjwUR.png)
