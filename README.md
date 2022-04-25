@@ -25,11 +25,13 @@ Aplicacion para organizar actividades hecha en react y styled components. Subido
 # Tecnologias usadas
 
 - [React](https://es.reactjs.org/)
+- [react-router-dom](https://reactrouter.com/)
 - [react-hot-toast](https://react-hot-toast.com/)
 - [react-icons](https://react-icons.github.io/react-icons/)
 - [prop-types](https://www.npmjs.com/package/prop-types)
 - [formik](https://formik.org/)
 - [axios](https://axios-http.com/docs/intro)
+- [Eslint](https://eslint.org/)
 
 # Launch
 
