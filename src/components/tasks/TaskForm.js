@@ -39,6 +39,7 @@ const TaskForm = () => {
     onSubmit: (values, { resetForm }) => {
       if (taskModification) {
         saveTaskChanges(values);
+        unselectModification();
       } else {
         createTask(values, folderSelected._id);
       }
